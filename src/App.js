@@ -72,7 +72,6 @@ export default class App extends Component {
 		return (
 			<div>
 				<MainContainer
-					className="main-container"
 					Highness={this.state.Highness}
 					Categories={this.state.Categories}
 					ChosenCategory={this.state.ChosenCategory}
