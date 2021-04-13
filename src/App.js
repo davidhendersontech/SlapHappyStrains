@@ -1,25 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import MainContainer from './containers/MainContainer'
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const ShowsURL = 'http://api.tvmaze.com/shows/1'
+
+export default class App extends Component {
+
+
+  state = {
+    Highness: 0,
+    Categories: [],
+    ChosenCategory: [],
+    SelectedMovie: []
+  }
+
+  setHighnessState = (value) => {
+    this.setState({
+      Highness : value
+    })
+  }
+
+
+  componentDidMount(){
+    fetch(ShowsURL)
+      .then(res => res.json())
+      .then(console.log)
+  }
+
+  render() {
+    return (
+      <div>
+        <MainContainer className="main-container"
+        Highness = {this.state.Highness} 
+        Categories = {this.state.Categories}
+        ChosenCategory = {this.state.ChosenCategory}
+        SelectedMovie = {this.state.SelectedMovie}
+        setHighnessState = {this.setHighnessState}
+        />
+      </div>
+    )
+  }
 }
-
-export default App;
