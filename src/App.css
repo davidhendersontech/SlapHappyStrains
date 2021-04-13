@@ -1,0 +1,31 @@
+Body {
+	width: auto;
+	height: auto;
+	background-color: #89a64b;
+}
+button {
+	display: flex;
+	align-items: center;
+	padding: 0.35em 1.2em;
+	border: 0.1em solid #ffffff;
+	margin: 0 0.3em 0.3em 0;
+	border-radius: 0.5em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-weight: 300;
+	color: #fbfbfc;
+	text-align: center;
+	background-color: #89a64b;
+}
+.Main {
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    
+    justify-content: space-around;
+}
+.sub {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}

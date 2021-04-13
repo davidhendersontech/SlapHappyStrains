@@ -27,7 +27,7 @@ export default function Categories(props) {
     
     const displayGenres = (level) => 
          props.Genres[level].map(genre => {
-            return <Genre  genreName = {genre} />
+            return <Genre  genreName = {genre} setChosenCategory = {props.setChosenCategory} setMatchingMovies={props.setMatchingMovies}/>
             })
     
     return (
