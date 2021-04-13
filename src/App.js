@@ -11,7 +11,15 @@ export default class App extends Component {
     Highness: 0,
     Categories: [],
     ChosenCategory: [],
-    SelectedMovie: []
+    SelectedMovie: [],
+    Genres : {
+      0: ["Crime","DIY","Horror"],
+      1: ["Adventure", "Drama", "History","Medical","Super-Natural"],
+      2: ["Action","History","Mystery","Nature","Science-Fiction","Super-Natural"],
+      3: ["Comedy","Food","Mystery","Nature","Science-Fiction","Thriller","Travel"],
+      4: ["Anime","Children","Fantasy","Food","Nature","Science-Fiction","Thrillers"]
+    }
+
   }
 
   setHighnessState = (value) => {
@@ -22,9 +30,9 @@ export default class App extends Component {
 
 
   componentDidMount(){
-    fetch(ShowsURL)
-      .then(res => res.json())
-      .then(console.log)
+    // fetch(ShowsURL)
+    //   .then(res => res.json())
+    //   .then(console.log)
   }
 
   render() {
@@ -36,6 +44,7 @@ export default class App extends Component {
         ChosenCategory = {this.state.ChosenCategory}
         SelectedMovie = {this.state.SelectedMovie}
         setHighnessState = {this.setHighnessState}
+        Genres = {this.state.Genres}
         />
       </div>
     )

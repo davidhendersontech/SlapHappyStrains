@@ -5,7 +5,7 @@ import MovieCard from '../components/MovieCard'
 export default function MainContainer(props) {
     return (
         <div className='Main'>
-            <LeftContainer Highness = {props.Highness} setHighnessState = {props.setHighnessState} />
+            <LeftContainer Highness = {props.Highness} setHighnessState = {props.setHighnessState} Genres = {props.Genres} />
             <MovieCard />
         </div>
     )

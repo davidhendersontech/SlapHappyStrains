@@ -5,7 +5,7 @@ export default function LeftContainer(props) {
     return (
         <div>
             <HighSlider setHighnessState = {props.setHighnessState}/>
-            <Categories Highness = {props.Highness}/>
+            <Categories Highness = {props.Highness} Genres = {props.Genres}/>
         </div>
     )
 }
